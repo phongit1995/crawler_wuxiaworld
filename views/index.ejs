@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Danh Sách Truyện</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/skins/square/blue.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="container-fluid" style="margin-top: 20px">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="javascript:void(0)">TOOL for WUXIAWORLD.SITE</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/">Leech Truyện</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="panel panel-info">
+        <div class="panel-body">
+            <form action="/leech-link" method="get">
+                <div class="input-group">
+                    <input type="text" class="form-control" required name="link" aria-label="" id="link" placeholder="Link truyện" value="">
+                    <span class="input-group-btn">
+                        <button class="btn btn-success" type="submit">Leech Truyện</button>
+                    </span>
+                </div>
+            </form>
+        </div>
+    </div>
+    <form action="/leech" method="get">
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <h3 class="panel-title">Danh Sách Truyện Mới - <b>WUXIAWORLD.SITE</b></h3>
+                <button type="submit" style="position: fixed;top: 23px;right: 18px; z-index: 999" class="btn btn-primary pull-right">Start Leech</button>
+            </div>
+            <div class="panel-body">
+                <table class="table table-hover table-striped table-bordered">
+                    <thead class="thead-light">
+                    <tr>
+                        <th scope="col"><input aria-label="" type="checkbox" class="check-all"></th>
+                        <th scope="col">Image</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Leeched chapters</th>
+                        <th scope="col">Is leeched</th>
+                        <th scope="col">Total votes</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <% list.forEach(function(item) { %>
+                        <tr>
+                            <td>
+                                <input name="id[]" aria-label="" value="<%=item.episode%>" type="checkbox" class="check-item">
+                            </td>
+                            <td>
+                                <img src="/image?url=<%=item.image %>" class="img-thumbnail" style="width: 100px;" alt="">
+                            </td>
+                            <td>
+                                <a target="_blank" href="<%=item.link%>"><%=item.title%></a>
+                            </td>
+                            <td><%=item.chapter_count%>/<%=item.total_chapter%></td>
+                            <td><%=(item.is_leeched ? 'Yes' : '')%></td>
+                            <td><%=item.total_vote%></td>
+                        </tr>
+                    <% }) %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/icheck.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

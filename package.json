@@ -1,0 +1,32 @@
+{
+  "name": "onekiss_git",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "async": "^3.1.0",
+    "aws-sdk": "^2.549.0",
+    "body-parser": "^1.19.0",
+    "bookshelf": "^1.0.1",
+    "chalk": "^2.4.2",
+    "cheerio": "^1.0.0-rc.3",
+    "cron": "^1.7.2",
+    "crypto-js": "^3.1.9-1",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "image-downloader": "^3.5.0",
+    "knex": "^0.19.5",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.27",
+    "mysql": "^2.17.1",
+    "php-serialize": "^3.0.0",
+    "request": "^2.88.0",
+    "sharp": "^0.23.1"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

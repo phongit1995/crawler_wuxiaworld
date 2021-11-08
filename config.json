@@ -1,0 +1,38 @@
+{
+    "database": {
+        "host": "127.0.0.1",
+        "user": "cakeusr",
+        "password": "8V7NT6dpJwmT6Exw",
+        "database": "cakedb",
+        "charset": "utf8mb4"
+    },
+    "s3": {
+        "accessKeyId": "",
+        "secretAccessKey": "",
+        "bucketName": ""
+    },
+    "bunnycdn": {
+        "AccessKey": "",
+        "ReadPassword": "",
+        "storageZoneName": "",
+        "pullZone": ""
+    },
+    "use_storage": "local",
+    "uploads_path": "/home/novelcakecom/novelcake.com/public_html/wp-content/uploads/",
+    "server": {
+        "port": 3008
+    },
+    "tables": {
+        "chapter": "wp_manga_chapters",
+        "chapter_data": "wp_manga_chapters_data",
+        "post": "wp_posts",
+        "post_meta": "wp_postmeta",
+        "term_relationship": "wp_term_relationships",
+        "options": "wp_options",
+        "term": "wp_terms",
+        "term_taxonomy": "wp_term_taxonomy"
+    },
+    "domain": "https://novelcake.com",
+    "hardCodeTermRelationship": [
+    ]
+}
